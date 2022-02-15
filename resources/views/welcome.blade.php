@@ -26,7 +26,7 @@
                             <th>{{ $todo->updated_at  }}</th>
                             <th>
                                 {{ Form::open(array('url' => ['delete',$todo], 'method' => 'delete')) }}
-                                    <button type="reset" class="button is-link" onclick="window.location='{{ url('show',['todo'=>$todo])  }}'">View</button>
+                                    <button type="button" class="button is-link" onclick="window.location='{{ url('show',['todo'=>$todo])  }}'">View</button>
 
                                     <button class="button is-danger" type="submit">Delete</button>
                                 {{ Form::close() }}
