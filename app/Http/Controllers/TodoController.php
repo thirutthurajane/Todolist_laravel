@@ -66,7 +66,7 @@ class TodoController extends Controller
      * @param  \App\Models\Todo  $todo
      * @return \Illuminate\Http\Response
      */
-    public function edit(int $id,StoreTodoRequest $request)
+    public function edit(int $id,UpdateTodoRequest $request)
     {
         //
         $todo = Todo::find($id);
