@@ -70,7 +70,6 @@ class TodoController extends Controller
     {
         //
         $todo = Todo::find($id);
-        error_log($request);
         $todo->title = $request->title;
         $todo->detail = $request->detail;
         $todo->save();
