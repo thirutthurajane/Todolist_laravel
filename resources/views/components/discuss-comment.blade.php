@@ -1,6 +1,6 @@
 @extends('layouts.header')
 @section('content')
-
+<script src="{{mix('js/app.js')}}"></script>
 <div class="box">
     <p class="is-size-4">{{ $discuss->topic }}</p>
 </div>

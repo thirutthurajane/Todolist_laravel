@@ -12,7 +12,7 @@ class CommentBroadcastChannel
         //
     }
 
-    public function join(Comment $comment): bool
+    public function join(): bool
     {
         //
         return true;

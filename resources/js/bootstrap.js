@@ -29,7 +29,7 @@ window.echo = new Echo({
     forceTLS: false
 });
 
-echo.channel(`discuss.${id}`)
+echo.channel(`discuss`)
     .listen('CommentBroadCastEvent',(e) => {
         console.log(e);
     });

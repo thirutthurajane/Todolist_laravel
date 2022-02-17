@@ -2201,7 +2201,7 @@ window.echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
   wsPort: 6001,
   forceTLS: false
 });
-echo.channel("discuss.".concat(discuss.id)).listen('CommentBroadCastEvent', function (e) {
+echo.channel("discuss").listen('CommentBroadCastEvent', function (e) {
   console.log(e);
 });
 
