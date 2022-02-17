@@ -41,6 +41,10 @@
             <a class="navbar-item" href="{{ url('/add')  }}">
                 Add Todo
             </a>
+
+            <a class="navbar-item" href="{{ url('/discuss')  }}">
+                Discuss
+            </a>
         </div>
     </div>
 </nav>

@@ -19,3 +19,7 @@ Route::post('/add',[\App\Http\Controllers\TodoController::class, 'store']);
 Route::get('/show/{todo}',[\App\Http\Controllers\TodoController::class, 'show']);
 Route::put('/edit/{id}', [\App\Http\Controllers\TodoController::class,'edit']);
 Route::delete('/delete/{todo}',[\App\Http\Controllers\TodoController::class,'destroy']);
+Route::get('/discuss',[\App\Http\Controllers\DiscussesController::class,'index']);
+Route::get('/discuss/add',[\App\Http\Controllers\DiscussesController::class,'create']);
+Route::get('/discuss/filter',[\App\Http\Controllers\DiscussesController::class,'filter']);
+Route::post('/discuss/add',[\App\Http\Controllers\DiscussesController::class,'store']);
