@@ -22,4 +22,6 @@ Route::delete('/delete/{todo}',[\App\Http\Controllers\TodoController::class,'des
 Route::get('/discuss',[\App\Http\Controllers\DiscussesController::class,'index']);
 Route::get('/discuss/add',[\App\Http\Controllers\DiscussesController::class,'create']);
 Route::get('/discuss/filter',[\App\Http\Controllers\DiscussesController::class,'filter']);
+Route::get('/discuss/{id}',[\App\Http\Controllers\DiscussesController::class,'show']);
 Route::post('/discuss/add',[\App\Http\Controllers\DiscussesController::class,'store']);
+Route::post('/discuss/comment',[\App\Http\Controllers\DiscussesController::class,'makeComment']);

@@ -28,9 +28,7 @@
                             <th>{{ $discuss->created_at  }}</th>
                             <th>{{ $discuss->updated_at }}</th>
                             <th>
-                                <button type="button" class="button is-link">View</button>
-
-                                <button class="button is-danger" type="submit">Delete</button>
+                                <button type="button" class="button is-link" onclick="window.location = '{{ url('discuss/'.$discuss->id) }}'">View</button>
                             </th>
                         </tr>
                     @endforeach

@@ -2,11 +2,24 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\CommentBroadCastEvent;
+use App\Models\Comment;
 use App\Models\Discuss;
 use Illuminate\Http\Request;
 
 class DiscussesController extends Controller
 {
+
+    public function makeComment(Request $request) {
+        $comment = new Comment();
+        $comment->discuss_id = $request->discuss_id;
+        $comment->commentDetail = $request->commentDetail;
+
+        $comment->save();
+
+        return redirect()->action([DiscussesController::class,'show'],['id' => $request->discuss_id]);
+    }
+
     public function index()
     {
         $discusses = Discuss::all();
@@ -35,10 +48,12 @@ class DiscussesController extends Controller
         return view('components.discuss',['discusses' => $discusses]);
     }
 
-    public function show(Discuss $discuss)
+    public function show(int $id)
     {
         //
-
+        $comments = Comment::with(['discuss'])->where('discuss_id',$id)->get();
+        $discuss = Discuss::find($id);
+        return view('components.discuss-comment', ['comments' => $comments,'discuss' => $discuss]);
     }
 
     public function edit(Discuss $discuss)

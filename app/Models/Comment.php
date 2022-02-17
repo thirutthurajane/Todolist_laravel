@@ -11,6 +11,7 @@ class Comment extends Model
 
     public $incrementing = true;
     protected $primaryKey = 'id';
+    public $timestamps = true;
     protected $attributes = [
         'commentDetail' => ''
     ];
